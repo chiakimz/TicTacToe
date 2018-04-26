@@ -6,6 +6,7 @@ class Game
   end
 
   def tic(n)
+    fail 'This place is taken! Choose somewhere else!' if @board[n - 1].instance_of?(String)
     if @turn % 2 == 0
       @board[n - 1] = 'X'
     else

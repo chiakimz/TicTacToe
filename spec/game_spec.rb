@@ -10,5 +10,11 @@ describe Game do
     it 'replaces numbers with X and O alternately' do
       expect(game.tic(4)).to eq [1, 2, 3, 'X', 5, 6, 7, 8, 9]
     end
-  end  
+
+    it 'raises an error if the place is already taken' do
+      message = 'This place is taken! Choose somewhere else!'
+      game.tic(3)
+      expect{ game.tic(3) }.to raise_error message
+    end
+  end
 end
