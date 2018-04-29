@@ -8,7 +8,7 @@ describe Game do
 
   describe 'tic(n)' do
     it 'replaces numbers with X and O alternately' do
-      expect(game.tic(1)).to eq ['X', 2, 3, 4, 5, 6, 7, 8, 9]
+      expect { game.tic(1) }.to output("\" X  2  3 \"\n\" 4  5  6 \"\n\" 7  8  9 \"\n").to_stdout
     end
 
     it 'raises an error if the place is already taken' do

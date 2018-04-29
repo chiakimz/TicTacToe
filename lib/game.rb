@@ -13,15 +13,18 @@ class Game
       @board[n - 1] = 'O'
     end
     if winner == 'X'
+      print_board
       return 'Cross won!'
     elsif winner == 'O'
+      print_board
       return 'Naught won!'
     end
     @turn += 1
     if @turn == 9
+      print_board
       return 'You losers'
     else
-      return @board
+      print_board
     end
   end
 
@@ -48,5 +51,9 @@ class Game
     else
       nil
     end
+  end
+
+  def print_board
+    return @board.each_slice(3) { |a| p ' %s '* 3 %(a) }
   end
 end
