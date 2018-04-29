@@ -1,16 +1,22 @@
 #Let's play this amazing Tic Tac Toe on your command line!
 
 run
-git clone git@github.com:chiakimz/TicTacToe.git
+
+git clone
+
+git@github.com:chiakimz/TicTacToe.git
 irb
+
 require './lib/game'
+
 game = Game.new
 
 and now you can see the board, s
  you can start playing by
+
 game.tic(n)
 
-enjoy! 
+enjoy!
 # Try our Tic Tac Toe Tech Test!
 
 This is a very common tech test as it demonstrates a candidate's knowledge of basic data structures.
